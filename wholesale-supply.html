@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wholesale vegetable supply in Chandrapur — daily fresh vegetable distribution to retailers, hotels, institutions across Chandrapur, Ballarpur, Bhadravati, Warora, Rajura and Vidarbha.">
+  <meta name="keywords" content="wholesale vegetables Chandrapur, vegetable supply Vidarbha, APMC Ram Nagar, fresh vegetables Chandrapur, wholesale vegetable merchant Maharashtra">
+  <meta property="og:title" content="Wholesale Supply | Suresh Namdeo Chawre">
+  <meta property="og:description" content="Taking Indian Agriculture To New Horizons — Domestic & wholesale vegetable supply Chandrapur">
+  <meta property="og:image" content="./assets/images/Logo-2.png">
+  <meta property="og:type" content="website">
+  <title>Wholesale Supply | Suresh Namdeo Chawre — Chandrapur</title>
+  <link rel="icon" type="image/png" href="./assets/images/Logo-2.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            'forest-dark': '#052e16', 'forest-mid': '#14532d', 'leaf': '#16a34a',
+            'gold': '#f59e0b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ── Wholesale Card ──────────────────────────────────────────── */
+    .wholesale-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .wholesale-cards-grid { grid-template-columns: 1fr; }
+    }
+    .wholesale-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 32px rgba(5,46,22,.09);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .wholesale-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(5,46,22,.15);
+    }
+    .wholesale-card-header {
+      padding: 2rem 2rem 1.5rem;
+    }
+    .wholesale-card-header.green  { background: linear-gradient(135deg,#052e16,#14532d); }
+    .wholesale-card-header.gold   { background: linear-gradient(135deg,#78350f,#d97706); }
+    .wholesale-card-icon { font-size: 3rem; margin-bottom: .75rem; }
+    .wholesale-card-title { font-size: 1.45rem; font-weight: 800; color: #fff; margin-bottom: .4rem; }
+    .wholesale-card-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.18);
+      color: #fff;
+      border-radius: 50px;
+      padding: .25rem .9rem;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .wholesale-card-body { padding: 1.75rem 2rem 2rem; flex: 1; display: flex; flex-direction: column; gap: 1.25rem; }
+    .wholesale-card-desc { color: var(--text-mid, #4b5563); line-height: 1.8; font-size: .95rem; }
+    .wholesale-markets { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .wholesale-market-chip {
+      background: #dcfce7;
+      color: #14532d;
+      border-radius: 50px;
+      padding: .28rem .85rem;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .wholesale-card.gold-card .wholesale-market-chip {
+      background: #fef3c7;
+      color: #78350f;
+    }
+    .wholesale-features { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin: 0; padding: 0; }
+    .wholesale-features li { display: flex; align-items: flex-start; gap: .6rem; font-size: .9rem; color: var(--text-mid, #4b5563); }
+    .wholesale-features li::before { content: "✓"; color: #16a34a; font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+    .wholesale-card.gold-card .wholesale-features li::before { color: #d97706; }
+
+    /* ── Distribution Pillars ──────────────────────────────────────── */
+    .wholesale-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .wholesale-pillar {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      box-shadow: 0 2px 20px rgba(5,46,22,.07);
+      border-left: 4px solid #16a34a;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .wholesale-pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(5,46,22,.13);
+    }
+    .wholesale-pillar-num {
+      font-size: .78rem;
+      font-weight: 800;
+      color: #16a34a;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: .6rem;
+    }
+    .wholesale-pillar-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--forest-dark, #052e16);
+      margin-bottom: .5rem;
+    }
+    .wholesale-pillar-desc { font-size: .88rem; color: var(--text-mid, #4b5563); line-height: 1.75; }
+
+    /* ── Intro image frame ───────────────────────────────────── */
+    .wholesale-img-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(5,46,22,.18);
+      height: 420px;
+      position: relative;
+    }
+    .wholesale-img-frame img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .wholesale-img-placeholder {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 100%; background: linear-gradient(135deg,#14532d,#16a34a); color: rgba(255,255,255,.8);
+      font-size: 5rem;
+    }
+
+    /* ── Stat badges ─────────────────────────────────────────── */
+    .wholesale-stat-badges { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+    .wholesale-stat-badge {
+      display: flex; align-items: center; gap: .5rem;
+      background: #f0fdf4; border: 1.5px solid #bbf7d0;
+      color: #14532d; border-radius: 50px;
+      padding: .4rem 1.1rem; font-size: .88rem; font-weight: 700;
+    }
+    .wholesale-stat-badge::before { content: "🚚"; }
+
+    /* ── Product chip grid ───────────────────────────────────── */
+    .product-chips { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+    .product-chip {
+      background: #f0fdf4; border: 2px solid #bbf7d0;
+      color: #052e16; border-radius: 50px;
+      padding: .55rem 1.4rem; font-size: .95rem; font-weight: 700;
+      transition: background .2s, color .2s, border-color .2s;
+      cursor: default;
+    }
+    .product-chip:hover {
+      background: #16a34a; color: #fff; border-color: #16a34a;
+    }
+
+    /* ── Page hero (inner pages) ─────────────────────────────── */
+    .page-hero {
+      background: linear-gradient(135deg,#052e16 0%,#14532d 60%,#1a6b3a 100%);
+      padding: 5.5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .5;
+    }
+    .page-hero-content { position: relative; z-index: 1; }
+    .page-hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.12); color: rgba(255,255,255,.9);
+      border-radius: 50px; padding: .35rem 1rem;
+      font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem,4vw,3.2rem);
+      font-weight: 900; color: #fff;
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .page-hero-tagline { font-size: 1.08rem; color: rgba(255,255,255,.8); max-width: 620px; line-height: 1.75; margin-bottom: 1.5rem; }
+    .breadcrumb { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: rgba(255,255,255,.65); }
+    .breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb-sep { opacity: .5; }
+    .breadcrumb-current { color: #fff; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div id="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span class="welcome-txt" data-i18n="tb-welcome">Welcome to <strong>Suresh Namdeo Chawre</strong></span>
+      <span class="sep">|</span>
+      <span class="top-bar-loc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span data-i18n="tb-location">APMC Market, Ram Nagar, Chandrapur</span>
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <a href="mailto:sncvegetable@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        sncvegetable@gmail.com
+      </a>
+      <a href="tel:+919975649575">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +91 99756 49575
+      </a>
+      <div class="top-bar-socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="lang-btn" aria-label="Language">
+          🌐 <span class="lang-label">English</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <a href="#" data-lang="en">🇬🇧 English</a>
+          <a href="#" data-lang="mr">🇮🇳 मराठी</a>
+          <a href="#" data-lang="hi">🇮🇳 हिंदी</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<header id="main-header">
+  <div class="container">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="./assets/images/Logo-e1735204361264.png" alt="SNC Logo" onerror="this.src='./assets/images/Logo-2.png'">
+      </div>
+      <div>
+        <div class="brand-name">Suresh Namdeo Chawre</div>
+        <div class="brand-tagline" data-i18n="brand-tagline">WHOLESALE VEGETABLES • CHANDRAPUR</div>
+      </div>
+    </div>
+    <nav>
+      <a href="./index.html" class="nav-link" data-i18n="nav-home">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link" data-i18n="nav-about">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="./history.html" data-i18n="nav-history">📜 History</a>
+          <a href="./vision-mission.html" data-i18n="nav-vm">🎯 Vision &amp; Mission</a>
+          <a href="./our-team.html" data-i18n="nav-team">👥 Our Team</a>
+        </div>
+      </div>
+      <a href="./products.html" class="nav-link" data-i18n="nav-products">Product Category</a>
+      <a href="./wholesale-supply.html" class="nav-link" data-i18n="nav-wholesale">Wholesale Supply</a>
+      <a href="./gallery.html" class="nav-link" data-i18n="nav-gallery">Gallery</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav-contact">Contact Us</a>
+      <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-wa" title="WhatsApp Manager">
+        <span class="nav-btn-icon">💬</span><span data-i18n="nav-wa-manager">WhatsApp Manager</span><span class="nav-btn-ext">↗</span>
+      </a>
+      <a href="./account-ledger.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-ledger" title="Account Ledger">
+        <span class="nav-btn-icon">📒</span><span data-i18n="nav-ledger">Account Ledger</span><span class="nav-btn-ext">↗</span>
+      </a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+919975649575" class="btn btn-primary" data-i18n="btn-call">📞 Call Now</a>
+      <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" data-i18n="btn-quote">💬 Bulk Quote</a>
+      <a href="#" class="btn-admin open-admin" data-i18n="btn-admin">🔐 Admin</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="mobile-nav-brand">🌿 Suresh Namdeo Chawre</div>
+    <button class="mobile-close" id="mobile-close" aria-label="Close">✕</button>
+  </div>
+  <a href="./index.html" class="mobile-nav-link">🏠 <span data-i18n="nav-home">Home</span></a>
+  <button class="mobile-nav-link mobile-nav-toggle" style="width:100%;text-align:left;color:rgba(255,255,255,.9);font-size:1.05rem;font-weight:600;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer;">
+    ℹ️ <span data-i18n="nav-about">About Us</span> <span class="nav-arrow">▾</span>
+  </button>
+  <div class="mobile-nav-sub" style="display:none;">
+    <a href="./history.html">📜 <span data-i18n="nav-history">History</span></a>
+    <a href="./vision-mission.html">🎯 <span data-i18n="nav-vm">Vision &amp; Mission</span></a>
+    <a href="./our-team.html">👥 <span data-i18n="nav-team">Our Team</span></a>
+  </div>
+  <a href="./products.html" class="mobile-nav-link">🥦 <span data-i18n="nav-products">Product Category</span></a>
+  <a href="./wholesale-supply.html" class="mobile-nav-link">🏪 <span data-i18n="nav-wholesale">Wholesale Supply</span></a>
+  <a href="./gallery.html" class="mobile-nav-link">🖼️ <span data-i18n="nav-gallery">Gallery</span></a>
+  <a href="./contact.html" class="mobile-nav-link">📞 <span data-i18n="nav-contact">Contact Us</span></a>
+  <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-wa">💬 <span data-i18n="nav-wa-manager">WhatsApp Manager</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <a href="./account-ledger.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-ledger">📒 <span data-i18n="nav-ledger">Account Ledger</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <div class="mobile-nav-actions">
+    <a href="tel:+919975649575" class="btn btn-primary" style="justify-content:center;">📞 Call: +91 99756 49575</a>
+    <a href="tel:+919922775569" class="btn btn-outline" style="justify-content:center;border-color:rgba(255,255,255,.4);color:#fff;">📞 +91 99227 75569 (Secondary)</a>
+    <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" style="justify-content:center;">💬 <span data-i18n="btn-quote">Bulk Quote</span></a>
+    <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20a%20wholesale%20inquiry." target="_blank" class="btn btn-gold" style="justify-content:center;">💬 WhatsApp (+91 95522 33488)</a>
+    <a href="#" class="btn btn-white open-admin" style="justify-content:center;color:#052e16;">🔐 Admin Login</a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html" data-i18n="footer-home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current" data-i18n="nav-wholesale">Wholesale Supply</span>
+      </nav>
+      <div class="page-hero-eyebrow" data-i18n="wholesale-label">🏪 DISTRIBUTION NETWORK</div>
+      <h1 data-i18n="wholesale-title">Serving Chandrapur &amp; <span>Surrounding Districts</span></h1>
+      <p class="page-hero-tagline" data-i18n="wholesale-subtitle">Daily fresh vegetable supply to retailers, hotels, institutions &amp; mandi buyers across Chandrapur and Vidarbha</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-pad">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <div class="section-label">OUR REACH</div>
+        <h2 class="section-title" data-i18n="wholesale-reach-title">Daily Supply to Chandrapur City &amp; Beyond</h2>
+        <p data-i18n="supply-reach-p1" style="color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">
+          At Suresh Namdeo Chawre (M/S Parag Sureshrao Chaware HUF), we are the backbone of vegetable supply in Chandrapur district. With <strong>25+ years</strong> as a licensed Commission Agent (Aadhathiya) at <strong>Krushi Utpanna Bazar Samiti, Ram Nagar, Chandrapur</strong>, we ensure fresh, quality-graded vegetables reach every corner of the city — from local kirana stores to large hotels and institutional kitchens.
+        </p>
+        <p data-i18n="supply-reach-p2" style="color:var(--text-mid);line-height:1.85;margin-bottom:1.75rem;">
+          Our daily mandi operations start at dawn — farmers bring their produce, we grade, auction, and dispatch to buyers across <strong>Chandrapur, Ballarpur, Bhadravati, Warora, Rajura, Chimur, Mul</strong> and surrounding talukas of Vidarbha.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem;">
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🏙️ Chandrapur City</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#fef3c7;color:#78350f;border:1.5px solid #fde68a;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🌾 APMC Ram Nagar</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Ballarpur</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Bhadravati</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Warora</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Rajura</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Chimur</span>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#14532d;border:1.5px solid #bbf7d0;border-radius:50px;padding:.35rem .95rem;font-size:.85rem;font-weight:700;">🚚 Mul</span>
+        </div>
+      </div>
+      <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(5,46,22,.18);aspect-ratio:4/3;">
+        <img src="./assets/images/market-vegetables.jpg" alt="APMC Chandrapur Wholesale Mandi" style="width:100%;height:100%;object-fit:cover;display:block;"
+          onerror="this.src='./assets/images/g515.png'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SUPPLY TO -->
+<section class="section-pad" style="background:#fff;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center;" data-i18n="supply-buyers-label">OUR BUYERS</div>
+      <h2 class="section-title" data-i18n="supply-buyers-title">Who We Supply To</h2>
+      <p class="section-subtitle" style="margin:0 auto;" data-i18n="supply-buyers-desc">From small retailers to large institutions — we serve every segment of the Chandrapur vegetable market daily</p>
+    </div>
+    <div class="wholesale-cards-grid">
+      <div class="wholesale-card reveal">
+        <div class="wholesale-card-header green">
+          <div class="wholesale-card-icon">🏬</div>
+          <div class="wholesale-card-title" data-i18n="wholesale-local-title">Local Chandrapur Supply</div>
+          <div class="wholesale-card-badge" data-i18n="supply-daily-badge">Daily Operations</div>
+        </div>
+        <div class="wholesale-card-body">
+          <p class="wholesale-card-desc" data-i18n="supply-local-desc">We supply fresh vegetables daily to retailers, vegetable vendors, kirana stores, and local markets throughout Chandrapur city — ensuring morning freshness reaches consumers by afternoon.</p>
+          <div class="wholesale-markets">
+            <span class="wholesale-market-chip">🏪 Retail Shops</span>
+            <span class="wholesale-market-chip">🥦 Vegetable Vendors</span>
+            <span class="wholesale-market-chip">🏢 Kirana Stores</span>
+            <span class="wholesale-market-chip">🛒 Local Markets</span>
+            <span class="wholesale-market-chip">🍽️ Dhabas &amp; Eateries</span>
+          </div>
+          <ul class="wholesale-features">
+            <li data-i18n="supply-local-feature-1">Fresh vegetables from APMC mandi — same-day dispatch</li>
+            <li data-i18n="supply-local-feature-2">Competitive mandi-rate pricing for buyers</li>
+            <li data-i18n="supply-local-feature-3">Flexible lot sizes — small or bulk orders</li>
+            <li data-i18n="supply-local-feature-4">QR-traceable batches for quality assurance</li>
+            <li data-i18n="supply-local-feature-5">Consistent supply even during peak seasons</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wholesale-card gold-card reveal" style="transition-delay:.1s;">
+        <div class="wholesale-card-header gold">
+          <div class="wholesale-card-icon">🌾</div>
+          <div class="wholesale-card-title" data-i18n="wholesale-regional-title">Regional Vidarbha Network</div>
+          <div class="wholesale-card-badge" data-i18n="supply-taluk-badge">Nearby Talukas &amp; Districts</div>
+        </div>
+        <div class="wholesale-card-body">
+          <p class="wholesale-card-desc" data-i18n="supply-regional-desc">Beyond Chandrapur city, we supply to hotels, school/college canteens, hospitals, and institutional kitchens in Ballarpur, Bhadravati, Warora, Rajura, Chimur, Mul and other nearby talukas.</p>
+          <div class="wholesale-markets">
+            <span class="wholesale-market-chip">🏨 Hotels &amp; Restaurants</span>
+            <span class="wholesale-market-chip">🏫 School Canteens</span>
+            <span class="wholesale-market-chip">🏥 Hospitals</span>
+            <span class="wholesale-market-chip">🏭 Institutions</span>
+            <span class="wholesale-market-chip">🛒 Regional Markets</span>
+          </div>
+          <ul class="wholesale-features">
+            <li data-i18n="supply-regional-feature-1">Ballarpur, Bhadravati, Warora, Rajura, Chimur, Mul</li>
+            <li data-i18n="supply-regional-feature-2">Customized bulk quantities per buyer requirement</li>
+            <li data-i18n="supply-regional-feature-3">Consistent Grade-A quality throughout the year</li>
+            <li data-i18n="supply-regional-feature-4">Pesticide-free GAP produce available on request</li>
+            <li data-i18n="supply-regional-feature-5">Trusted partnerships with regional hotel chains</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT SETS US APART -->
+<section class="section-pad" style="background:var(--surface);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center;" data-i18n="supply-edge-label">OUR EDGE</div>
+      <h2 class="section-title" data-i18n="supply-edge-title">What Sets Us Apart</h2>
+      <p class="section-subtitle" style="margin:0 auto;" data-i18n="supply-edge-desc">Five pillars that define our wholesale excellence and build lasting buyer trust in Chandrapur</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
+      <div class="wholesale-pillar reveal">
+        <div class="wholesale-pillar-num">01 — Quality</div>
+        <div class="wholesale-pillar-title" data-i18n="pillar-quality-title">Rigorous Quality Control</div>
+        <p class="wholesale-pillar-desc" data-i18n="pillar-quality-desc">Multi-level grading and quality inspection at every APMC auction — only fresh, Grade-A vegetables dispatched to buyers every day.</p>
+      </div>
+      <div class="wholesale-pillar reveal" style="transition-delay:.08s;">
+        <div class="wholesale-pillar-num">02 — Technology</div>
+        <div class="wholesale-pillar-title" data-i18n="pillar-qr-title">QR Code Traceability</div>
+        <p class="wholesale-pillar-desc" data-i18n="pillar-qr-desc">Every batch carries a QR code linking to detailed farm origin, harvest date, farmer name, and pesticide test results — full transparency at a scan.</p>
+      </div>
+      <div class="wholesale-pillar reveal" style="transition-delay:.16s;">
+        <div class="wholesale-pillar-num">03 — Pricing</div>
+        <div class="wholesale-pillar-title" data-i18n="pillar-fair-title">Fair &amp; Transparent Pricing</div>
+        <p class="wholesale-pillar-desc" data-i18n="pillar-fair-desc">As licensed APMC Commission Agents (Aadhathiya), we ensure fair mandi-rate auctioning for both farmers and buyers — no hidden charges, no price manipulation.</p>
+      </div>
+      <div class="wholesale-pillar reveal" style="transition-delay:.24s;">
+        <div class="wholesale-pillar-num">04 — Freshness</div>
+        <div class="wholesale-pillar-title" data-i18n="pillar-fresh-title">Farm-to-Market Freshness</div>
+        <p class="wholesale-pillar-desc" data-i18n="pillar-fresh-desc">Vegetables sourced directly from local Chandrapur and Vidarbha farmers, auctioned same-day at APMC, and dispatched immediately — maximum freshness guaranteed.</p>
+      </div>
+      <div class="wholesale-pillar reveal" style="grid-column:1/-1;max-width:52%;margin:0 auto;transition-delay:.32s;">
+        <div class="wholesale-pillar-num">05 — Reliability</div>
+        <div class="wholesale-pillar-title" data-i18n="pillar-reliable-title">Year-Round Reliable Supply</div>
+        <p class="wholesale-pillar-desc" data-i18n="pillar-reliable-desc">25+ years of uninterrupted operations through every season — from summer peaks to monsoon challenges. Our buyers count on us every day, 365 days a year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT RANGE -->
+<section class="section-pad" style="background:#fff;">
+  <div class="container" style="text-align:center;">
+    <div class="section-label" style="justify-content:center;" data-i18n="supply-range-label">WHAT WE SUPPLY</div>
+    <h2 class="section-title" data-i18n="supply-range-title">Our Vegetable Supply Range</h2>
+    <p class="section-subtitle" style="margin:0 auto 2.5rem;" data-i18n="supply-range-desc">Fresh, quality-graded vegetables sourced from Chandrapur and Vidarbha farmers — available daily at APMC Ram Nagar</p>
+    <div class="product-chips">
+      <span data-i18n="wholesale-chip-tomato" class="product-chip">🍅 Tomatoes (टमाटर)</span>
+      <span data-i18n="wholesale-chip-red-onion" class="product-chip">🧅 Red Onions (लाल कांदा)</span>
+      <span data-i18n="wholesale-chip-white-onion" class="product-chip">🧅 White Onions (पांढरा कांदा)</span>
+      <span data-i18n="wholesale-chip-potato" class="product-chip">🥔 Potatoes (बटाटा)</span>
+      <span data-i18n="wholesale-chip-chili" class="product-chip">🌶️ Green Chilies (हिरवी मिरची)</span>
+      <span data-i18n="wholesale-chip-garlic" class="product-chip">🧄 Garlic (लसूण)</span>
+      <span data-i18n="wholesale-chip-ginger" class="product-chip">🌿 Ginger (आले)</span>
+      <span data-i18n="wholesale-chip-leafy" class="product-chip">🥬 Leafy Greens (पालेभाज्या)</span>
+      <span data-i18n="wholesale-chip-seasonal" class="product-chip">🌱 Seasonal Vegetables (हंगामी भाज्या)</span>
+      <span data-i18n="wholesale-chip-gap" class="product-chip">🌿 GAP / Pesticide-Free (जैविक)</span>
+    </div>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="https://wa.me/919552233488?text=Hello%2C+I+would+like+to+inquire+about+wholesale+vegetable+supply+for+my+business.+Please+share+today%27s+available+quantities+and+rates.+%E2%80%94+paragsureshraochaware.co.in" target="_blank" class="btn btn-gold" style="font-size:1rem;padding:.85rem 2rem;">
+        💬 Inquire for Wholesale Supply
+      </a>
+      <a href="./contact.html" class="btn btn-outline" style="font-size:1rem;padding:.85rem 2rem;">
+        📞 Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-badge">🏆 25+ Years Of Experience</div>
+          <div class="footer-logo-wrap">
+            <div class="footer-logo-img">
+              <img src="./assets/images/Logo-2.png" alt="SNC Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-weight:900;color:#fff;font-size:1.1rem;\'>SNC</span>'">
+            </div>
+            <div>
+              <h3>M/S Parag Sureshrao Chaware (HUF)</h3>
+              <div class="footer-unit">Suresh Namdeorao Chaware — Wholesale Vegetables Merchant</div>
+            </div>
+          </div>
+          <p data-i18n="footer-tagline">We take pride in being a cornerstone of the agricultural ecosystem in Chandrapur, Maharashtra — connecting farmers, buyers, and the city.</p>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:1rem;">Udyam Reg. No.: <strong style="color:var(--gold);">UDYAM-MH-08-0029832</strong></div>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer-links-title">Quick Links</h4>
+          <ul>
+            <li><a href="./index.html" data-i18n="footer-home">Home</a></li>
+            <li><a href="./history.html" data-i18n="footer-history">History of Chandrapur</a></li>
+            <li><a href="./vision-mission.html" data-i18n="nav-vm">Vision &amp; Mission</a></li>
+            <li><a href="./our-team.html" data-i18n="nav-team">Our Team</a></li>
+            <li><a href="./products.html" data-i18n="footer-products">Product Category</a></li>
+            <li><a href="./wholesale-supply.html" data-i18n="nav-wholesale">Wholesale Supply</a></li>
+            <li><a href="./gallery.html" data-i18n="footer-gallery">Gallery</a></li>
+            <li><a href="./contact.html" data-i18n="footer-contact">Contact Us</a></li>
+            <li><a href="./whatsapp-manager.html" target="_blank" rel="noopener">💬 WhatsApp Manager ↗</a></li>
+            <li><a href="./account-ledger.html" target="_blank" rel="noopener">📒 Account Ledger ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer-contact-title">Get In Touch</h4>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              Block 15-16, Krushi Bazar Samiti,<br>Datala Road, Ramnagar,<br>Chandrapur, Maharashtra - 442401
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <a href="tel:+919975649575">📞 +91 99756 49575 (Call)</a><br>
+              <a href="https://wa.me/919552233488">💬 +91 95522 33488 (WhatsApp)</a><br>
+              <a href="tel:+919922775569">+91 99227 75569 (Secondary)</a><br>
+              <a href="tel:+919850151889">+91 98501 51889 (Secondary)</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <a href="mailto:sncvegetable@gmail.com">sncvegetable@gmail.com</a><br>
+              <a href="mailto:paragchaware@gmail.com">paragchaware@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">Mon–Sat: 6:00 AM – 8:00 PM<br><span style="color:var(--gold);font-weight:600;">Open • APMC Market Hours</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span data-i18n="footer-copyright">© 2026 M/S Parag Sureshrao Chaware (HUF) | Suresh Namdeorao Chaware Wholesale Vegetables Merchant. All Rights Reserved.</span>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <div class="udyam-badge">UDYAM-MH-08-0029832</div>
+        <a href="https://maps.app.goo.gl/Wcz9DRLzqWhwTSBo7" target="_blank" style="color:var(--gold);font-size:.72rem;font-weight:600;">⭐ 4.8 Google</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING ACTION DOCK -->
+<div id="float-dock">
+  <button id="scroll-top" class="float-btn float-top" title="Back to top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+  <a href="tel:+919975649575" class="float-btn float-call" title="Call Now" aria-label="Call Now">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  </a>
+  <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%27d%20like%20to%20ask%20about%20wholesale%20supply%20in%20Chandrapur." target="_blank" class="float-btn float-wa" title="WhatsApp +91 95522 33488" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="admin-modal">
+  <div class="admin-modal-box">
+    <button class="admin-modal-close" aria-label="Close">✕</button>
+    <div class="admin-modal-logo">🔐</div>
+    <div class="admin-modal-title">Admin Login</div>
+    <div class="admin-modal-sub">Suresh Namdeo Chawre — Secure Admin Access</div>
+    <form id="admin-form">
+      <div class="form-group">
+        <label><span data-i18n="admin-label-user">Username / Email</span></label>
+        <input type="text" class="form-control" placeholder="Enter admin username" data-i18n-placeholder="admin-placeholder-user" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="admin-label-password">Password</span></label>
+        <input type="password" class="form-control" placeholder="Enter password" data-i18n-placeholder="admin-placeholder-password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem;"><span data-i18n="btn-sign-in">Sign In</span></button>
+    </form>
+    <p class="admin-note">🔒 <span data-i18n="admin-note">Secure admin access only. Unauthorized access is prohibited.</span></p>
+  </div>
+</div>
+
+<!-- BULK QUOTE MODAL -->
+<div id="quote-modal">
+  <div class="quote-modal-box">
+    <button class="quote-modal-close" aria-label="Close">✕</button>
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <div style="font-size:2.5rem;margin-bottom:.5rem;">📋</div>
+      <h3 style="font-size:1.3rem;font-weight:800;color:var(--forest-dark);margin-bottom:.35rem;"><span data-i18n="quote-title">Request Bulk Quote</span></h3>
+      <p style="font-size:.88rem;color:var(--text-light);"><span data-i18n="quote-response">We'll respond within 2 business hours.</span></p>
+    </div>
+    <form id="quote-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span data-i18n="quote-name">Your Name / Business</span></label>
+          <input type="text" name="name" class="form-control" placeholder="Enter name or company" data-i18n-placeholder="quote-placeholder-name" required>
+        </div>
+        <div class="form-group">
+          <label><span data-i18n="quote-phone">Phone / WhatsApp</span></label>
+          <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-product">Product Required</span></label>
+        <input type="text" name="product" id="quote-product" class="form-control" placeholder="e.g. Tomatoes, Onions, Potatoes" data-i18n-placeholder="quote-placeholder-product">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-quantity">Estimated Quantity</span></label>
+        <input type="text" name="quantity" class="form-control" placeholder="e.g. 5 tons, 500 kg/week" data-i18n-placeholder="quote-placeholder-quantity">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-note">Additional Note</span></label>
+        <textarea name="message" class="form-control" rows="3" placeholder="Delivery requirements, grading specs, etc." data-i18n-placeholder="quote-placeholder-message"></textarea>
+      </div>
+      <div style="display:flex;gap:.75rem;">
+        <button type="button" id="quote-wa-btn" class="btn btn-gold" style="flex:1;justify-content:center;">
+          <span data-i18n="quote-submit">💬 Send via WhatsApp</span>
+        </button>
+        <a href="./contact.html" class="btn btn-primary" style="flex:1;justify-content:center;text-align:center;">
+          Full Inquiry Form
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lightbox-img-wrap">
+    <button id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-btn" id="lb-prev" aria-label="Previous">‹</button>
+    <img id="lb-img" src="" alt="Gallery Image">
+    <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
+    <div class="lb-counter" id="lb-counter"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+</div>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+

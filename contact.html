@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Suresh Namdeo Chawre — Wholesale Vegetables Merchant & Commission Agent in Chandrapur. Get in touch for wholesale inquiries and bulk orders.">
+  <meta name="keywords" content="contact wholesale vegetables Chandrapur, vegetable merchant contact Maharashtra, APMC Chandrapur inquiry, Suresh Chawre contact">
+  <meta property="og:title" content="Contact Us | Suresh Namdeo Chawre — Wholesale Vegetables Merchant">
+  <meta property="og:description" content="Get in touch for wholesale inquiries, bulk orders, or general information.">
+  <meta property="og:image" content="./assets/images/Logo-2.png">
+  <meta property="og:type" content="website">
+  <title>Contact Us | Suresh Namdeo Chawre</title>
+  <link rel="icon" type="image/png" href="./assets/images/Logo-2.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            'forest-dark': '#052e16', 'forest-mid': '#14532d', 'leaf': '#16a34a',
+            'gold': '#f59e0b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ---- Contact Page Specific Styles ---- */
+    .page-hero {
+      background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-mid) 60%, #1a6b3a 100%);
+      padding: 5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .4;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: .75rem;
+    }
+    .page-hero h1 span { color: var(--gold-dark, #f59e0b); }
+    .page-hero p {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,.8);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      justify-content: center;
+      font-size: .9rem;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb .sep { color: rgba(255,255,255,.4); }
+
+    /* Contact Cards */
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+      margin-top: .5rem;
+    }
+    .contact-card {
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(5,46,22,.06);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(5,46,22,.12);
+    }
+    .contact-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .contact-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--forest-dark);
+      margin-bottom: .75rem;
+    }
+    .contact-card p, .contact-card a {
+      font-size: .93rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      display: block;
+      text-decoration: none;
+    }
+    .contact-card a:hover { color: var(--leaf-green); }
+    .contact-card .avail {
+      display: inline-block;
+      margin-top: .6rem;
+      font-size: .82rem;
+      color: #16a34a;
+      background: #dcfce7;
+      border-radius: 20px;
+      padding: .25rem .9rem;
+      font-weight: 600;
+    }
+
+    /* Two-column section */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+    @media (max-width: 860px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 4px 32px rgba(5,46,22,.08);
+    }
+    .contact-form-wrap h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--forest-dark);
+      margin-bottom: .4rem;
+    }
+    .contact-form-wrap .sub {
+      font-size: .88rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--forest-dark);
+      margin-bottom: .35rem;
+    }
+    .form-group label .req { color: #e53e3e; margin-left: 2px; }
+    .form-control {
+      width: 100%;
+      padding: .6rem .9rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: .92rem;
+      color: var(--forest-dark);
+      background: #f9fafb;
+      transition: border-color .18s, box-shadow .18s;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .form-control:focus {
+      border-color: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22,163,74,.1);
+      background: #fff;
+    }
+    select.form-control { cursor: pointer; }
+    textarea.form-control { resize: vertical; min-height: 90px; }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: .5rem .75rem;
+      margin-top: .35rem;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .88rem;
+      color: var(--text-mid);
+      cursor: pointer;
+    }
+    .checkbox-label input[type="checkbox"] {
+      accent-color: #16a34a;
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+    .form-btn-row {
+      display: flex;
+      gap: .85rem;
+      margin-top: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .form-btn-row .btn { flex: 1; justify-content: center; min-width: 160px; }
+
+    /* Right panel */
+    .quick-contact-panel {
+      background: var(--forest-dark);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      color: #fff;
+      position: sticky;
+      top: 90px;
+    }
+    .quick-contact-panel h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .biz-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 1.25rem 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    .biz-card .biz-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #f59e0b;
+      margin-bottom: .25rem;
+    }
+    .biz-card .biz-unit {
+      font-size: .82rem;
+      color: rgba(255,255,255,.75);
+      margin-bottom: .6rem;
+    }
+    .biz-card .biz-reg {
+      display: inline-block;
+      font-size: .75rem;
+      background: rgba(245,158,11,.18);
+      color: #fcd34d;
+      border-radius: 20px;
+      padding: .18rem .7rem;
+      font-weight: 600;
+      margin-bottom: .9rem;
+    }
+    .biz-row {
+      display: flex;
+      gap: .6rem;
+      align-items: flex-start;
+      margin-bottom: .6rem;
+      font-size: .86rem;
+      color: rgba(255,255,255,.8);
+    }
+    .biz-row .ic { font-size: 1rem; flex-shrink: 0; margin-top: .05rem; }
+    .biz-row a { color: rgba(255,255,255,.85); text-decoration: none; }
+    .biz-row a:hover { color: #f59e0b; }
+
+    .wa-quick-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      background: #25d366;
+      color: #fff;
+      border-radius: 12px;
+      padding: .8rem 1rem;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: background .18s;
+    }
+    .wa-quick-btn:hover { background: #1aab52; }
+
+    .quick-socials {
+      display: flex;
+      gap: .6rem;
+      margin-top: .5rem;
+    }
+    .quick-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,.1);
+      border-radius: 8px;
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      transition: background .18s, color .18s;
+    }
+    .quick-socials a:hover { background: #f59e0b; color: #fff; }
+
+    /* Map */
+    .map-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(5,46,22,.1);
+    }
+    .map-wrap iframe { display: block; }
+    .map-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .map-info h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--forest-dark);
+      margin-bottom: .4rem;
+    }
+    .map-info p { font-size: .92rem; color: var(--text-mid); }
+
+    /* CTA Strip */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-mid) 60%, #1a6b3a 100%);
+      padding: 4rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .4;
+    }
+    .cta-strip .container { position: relative; z-index: 1; }
+    .cta-strip h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: .9rem;
+    }
+    .cta-strip p { font-size: 1rem; color: rgba(255,255,255,.8); margin-bottom: 1.75rem; }
+    .cta-strip .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div id="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span class="welcome-txt" data-i18n="tb-welcome">Welcome to <strong>Suresh Namdeo Chawre</strong></span>
+      <span class="sep">|</span>
+      <span class="top-bar-loc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span data-i18n="tb-location">APMC Market, Ram Nagar, Chandrapur</span>
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <a href="mailto:sncvegetable@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        sncvegetable@gmail.com
+      </a>
+      <a href="tel:+919975649575">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +91 99756 49575
+      </a>
+      <div class="top-bar-socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="lang-btn" aria-label="Language">
+          🌐 <span class="lang-label">English</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <a href="#" data-lang="en">🇬🇧 English</a>
+          <a href="#" data-lang="mr">🇮🇳 मराठी</a>
+          <a href="#" data-lang="hi">🇮🇳 हिंदी</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<header id="main-header">
+  <div class="container">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="./assets/images/Logo-e1735204361264.png" alt="SNC Logo" onerror="this.src='./assets/images/Logo-2.png'">
+      </div>
+      <div>
+        <div class="brand-name">Suresh Namdeo Chawre</div>
+        <div class="brand-tagline" data-i18n="brand-tagline">WHOLESALE VEGETABLES • CHANDRAPUR</div>
+      </div>
+    </div>
+    <nav>
+      <a href="./index.html" class="nav-link" data-i18n="nav-home">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link" data-i18n="nav-about">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="./history.html" data-i18n="nav-history">📜 History</a>
+          <a href="./vision-mission.html" data-i18n="nav-vm">🎯 Vision &amp; Mission</a>
+          <a href="./our-team.html" data-i18n="nav-team">👥 Our Team</a>
+        </div>
+      </div>
+      <a href="./products.html" class="nav-link" data-i18n="nav-products">Product Category</a>
+      <a href="./wholesale-supply.html" class="nav-link" data-i18n="nav-wholesale">Wholesale Supply</a>
+      <a href="./gallery.html" class="nav-link" data-i18n="nav-gallery">Gallery</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav-contact">Contact Us</a>
+      <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-wa" title="WhatsApp Manager">
+        <span class="nav-btn-icon">💬</span><span data-i18n="nav-wa-manager">WhatsApp Manager</span><span class="nav-btn-ext">↗</span>
+      </a>
+      <a href="./account-ledger.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-ledger" title="Account Ledger">
+        <span class="nav-btn-icon">📒</span><span data-i18n="nav-ledger">Account Ledger</span><span class="nav-btn-ext">↗</span>
+      </a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+919975649575" class="btn btn-primary" data-i18n="btn-call">📞 Call Now</a>
+      <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" data-i18n="btn-quote">💬 Bulk Quote</a>
+      <a href="#" class="btn-admin open-admin" data-i18n="btn-admin">🔐 Admin</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="mobile-nav-brand">🌿 Suresh Namdeo Chawre</div>
+    <button class="mobile-close" id="mobile-close" aria-label="Close">✕</button>
+  </div>
+  <a href="./index.html" class="mobile-nav-link">🏠 <span data-i18n="nav-home">Home</span></a>
+  <button class="mobile-nav-link mobile-nav-toggle" style="width:100%;text-align:left;color:rgba(255,255,255,.9);font-size:1.05rem;font-weight:600;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer;">
+    ℹ️ <span data-i18n="nav-about">About Us</span> <span class="nav-arrow">▾</span>
+  </button>
+  <div class="mobile-nav-sub" style="display:none;">
+    <a href="./history.html">📜 <span data-i18n="nav-history">History</span></a>
+    <a href="./vision-mission.html">🎯 <span data-i18n="nav-vm">Vision &amp; Mission</span></a>
+    <a href="./our-team.html">👥 <span data-i18n="nav-team">Our Team</span></a>
+  </div>
+  <a href="./products.html" class="mobile-nav-link">🥦 <span data-i18n="nav-products">Product Category</span></a>
+  <a href="./wholesale-supply.html" class="mobile-nav-link">🏪 <span data-i18n="nav-wholesale">Wholesale Supply</span></a>
+  <a href="./gallery.html" class="mobile-nav-link">🖼️ <span data-i18n="nav-gallery">Gallery</span></a>
+  <a href="./contact.html" class="mobile-nav-link">📞 <span data-i18n="nav-contact">Contact Us</span></a>
+  <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-wa">💬 <span data-i18n="nav-wa-manager">WhatsApp Manager</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <a href="./account-ledger.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-ledger">📒 <span data-i18n="nav-ledger">Account Ledger</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <div class="mobile-nav-actions">
+    <a href="tel:+919975649575" class="btn btn-primary" style="justify-content:center;">📞 Call: +91 99756 49575</a>
+    <a href="tel:+919922775569" class="btn btn-outline" style="justify-content:center;border-color:rgba(255,255,255,.4);color:#fff;">📞 +91 99227 75569</a>
+    <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" style="justify-content:center;">💬 <span data-i18n="btn-quote">Bulk Quote</span></a>
+    <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20a%20wholesale%20inquiry." target="_blank" class="btn btn-gold" style="justify-content:center;">💬 WhatsApp</a>
+    <a href="#" class="btn btn-white open-admin" style="justify-content:center;color:#052e16;">🔐 Admin Login</a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="./index.html" data-i18n="footer-home">Home</a>
+        <span class="sep">›</span>
+        <span data-i18n="nav-contact">Contact Us</span>
+      </div>
+      <div data-i18n="contact-label" class="badge badge-gold" style="margin:0 auto 1rem;display:inline-flex;">📞 Get In Touch</div>
+      <h1 data-i18n="contact-page-title">Ready To Work With Us</h1>
+      <p><span data-i18n="contact-ready-copy">Get in touch for wholesale inquiries, bulk orders, or general information.</span></p>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+919975649575" data-i18n="btn-call-now" class="btn btn-gold" style="font-size:.95rem;">📞 Call Now</a>
+        <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20a%20wholesale%20inquiry." target="_blank" class="btn btn-white" data-i18n="btn-whatsapp-us" style="font-size:.95rem;color:#052e16;">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONTACT CARDS ROW -->
+<!-- ============================================================ -->
+<section class="section-pad" style="background:#fff;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div data-i18n="contact-reach-copy" class="section-label" style="justify-content:center;">Our Details</div>
+      <h2 class="section-title" data-i18n="contact-section-reach" style="margin:0 auto .6rem;">How To Reach Us</h2>
+      <p data-i18n="contact-reach-copy" class="section-subtitle" style="margin:0 auto;">Multiple ways to connect with Chandrapur's most trusted wholesale vegetable merchant.</p>
+    </div>
+    <div class="contact-cards-grid">
+
+      <!-- Card 1: Address -->
+      <div class="contact-card reveal">
+        <span class="contact-card-icon">📍</span>
+        <h3 data-i18n="contact-location-title">Our Location</h3>
+        <p><strong>Shop No. 15 &amp; 16</strong></p>
+        <p>Mahatma Jyotibha Phule Market,<br>Krushi Utpanna Bazar, Samiti Ram Nagar,<br>Chandrapur, Maharashtra 442401</p>
+        <p style="margin-top:.6rem;padding-top:.6rem;border-top:1px dashed #e2e8f0;">Block 15-16, Krushi Bazar Samiti,<br>Datala Road, Ramnagar,<br>Chandrapur – 442401</p>
+        <a href="https://maps.google.com/?q=Mahatma+Jyotibha+Phule+Market+Ramnagar+Chandrapur+Maharashtra" target="_blank" data-i18n="contact-btn-directions" class="btn btn-outline" style="margin-top:1rem;font-size:.82rem;padding:.4rem 1rem;display:inline-flex;">📌 Get Directions</a>
+      </div>
+
+      <!-- Card 2: Phone -->
+      <div class="contact-card reveal" style="transition-delay:.1s;">
+        <span class="contact-card-icon">📞</span>
+        <h3 data-i18n="contact-phone-title">Phone Numbers</h3>
+        <a href="tel:+919975649575" style="font-size:1.05rem;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:.4rem;"><strong>+91 99756 49575</strong> <span style="font-size:.72rem;background:#fef3c7;color:#78350f;border-radius:4px;padding:.1rem .4rem;font-weight:800;"><span data-i18n="contact-phone-primary">PARAG · PRIMARY CALL</span></span></a>
+        <a href="tel:+919922775569" style="font-size:1.05rem;font-weight:700;color:var(--forest-dark);margin-top:.35rem;">+91 99227 75569 · <span data-i18n="contact-phone-secondary">Secondary</span></a>
+        <a href="tel:+919850151889" style="font-size:1.05rem;font-weight:700;color:var(--forest-dark);margin-top:.35rem;">+91 98501 51889 · <span data-i18n="contact-phone-secondary">Secondary</span></a>
+        <span class="avail">🕐 Mon–Sat &nbsp;|&nbsp; 6:00 AM – 8:00 PM</span>
+        <div style="margin-top:1rem;">
+          <a href="https://wa.me/919552233488" target="_blank" class="btn btn-gold" style="font-size:.82rem;padding:.4rem 1rem;display:inline-flex;">💬 WhatsApp: +91 95522 33488</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Email -->
+      <div class="contact-card reveal" style="transition-delay:.2s;">
+        <span class="contact-card-icon">✉️</span>
+        <h3 data-i18n="contact-email-title">Email &amp; WhatsApp</h3>
+        <a href="mailto:sncvegetable@gmail.com" style="color:var(--leaf-green);font-weight:600;">sncvegetable@gmail.com</a>
+        <a href="mailto:paragchaware@gmail.com" style="color:var(--leaf-green);font-weight:600;margin-top:.3rem;font-size:.88rem;">paragchaware@gmail.com</a>
+        <p style="margin-top:.7rem;padding-top:.7rem;border-top:1px dashed #e2e8f0;font-size:.88rem;">
+          💬 WhatsApp:<br>
+          <a href="https://wa.me/919552233488" target="_blank" style="color:var(--forest-dark);font-weight:700;">+91 95522 33488</a>
+        </p>
+        <div style="margin-top:.9rem;">
+          <a href="mailto:sncvegetable@gmail.com" data-i18n="contact-btn-email" class="btn btn-primary" style="font-size:.82rem;padding:.4rem 1rem;display:inline-flex;">✉️ Send Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TWO-COLUMN: FORM + QUICK CONTACT -->
+<!-- ============================================================ -->
+<section class="section-pad" style="background:var(--surface);">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: CONTACT FORM -->
+      <div>
+        <div class="section-label">Send Inquiry</div>
+        <h2 class="section-title" data-i18n="contact-form-title" style="margin-bottom:1.5rem;">Drop Us a Message</h2>
+        <form class="contact-form-wrap" id="wa-inquiry-form" action="https://formspree.io/f/xdkgnqyz" method="POST">
+          <p class="sub"><span data-i18n="contact-message-copy">Fill in your details below — we respond within 2 business hours.</span></p>
+
+          <div class="form-group">
+            <label><span data-i18n="contact-form-name">Name / Business Name</span> <span class="req">*</span></label>
+            <input type="text" name="name" class="form-control" placeholder="Your name or company name" data-i18n-placeholder="quote-placeholder-name" data-i18n-placeholder="quote-placeholder-name" required>
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="quote-phone">Phone / WhatsApp</span> <span class="req">*</span></label>
+            <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="contact-form-email">Email Address</span></label>
+            <input type="email" name="email" class="form-control" placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="contact-form-type">Inquiry Type</span></label>
+            <select name="inquiry_type" class="form-control">
+              <option value="" disabled selected data-i18n="contact-option-select">Select Inquiry Type</option>
+              <option value="domestic_wholesale" data-i18n="contact-option-wholesale">Domestic Wholesale</option>
+              <option value="institutional" data-i18n="contact-option-institutional">Institutional Buyers</option>
+              <option value="farmer_supply" data-i18n="contact-option-farmer">Farmer Produce Supply</option>
+              <option value="general" data-i18n="contact-option-general">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="contact-form-products">Product Selection</span></label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Tomatoes"><span data-i18n="contact-opt-tomato"> 🍅 Tomatoes</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Red Onions"><span data-i18n="contact-opt-red-onion"> 🧅 Red Onions</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="White Onions"><span data-i18n="contact-opt-white-onion"> 🧅 White Onions</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Potatoes"><span data-i18n="contact-opt-potato"> 🥔 Potatoes</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Green Chilies"><span data-i18n="contact-opt-chili"> 🌶️ Green Chilies</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Garlic"><span data-i18n="contact-opt-garlic"> 🧄 Garlic</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Ginger"><span data-i18n="contact-opt-ginger"> 🫚 Ginger</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Leafy Vegetables"><span data-i18n="contact-opt-leafy"> 🥬 Leafy Vegetables</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="GAP/Organic Produce"><span data-i18n="contact-opt-gap"> 🌿 GAP/Organic Produce</span></label>
+              <label class="checkbox-label"><input type="checkbox" name="products" value="Other"><span data-i18n="contact-opt-other"> 📦 Other</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="quote-quantity">Estimated Quantity</span></label>
+            <input type="text" name="quantity" class="form-control" placeholder="e.g. 5 tons, 500 kg/week" data-i18n-placeholder="quote-placeholder-quantity">
+          </div>
+
+          <div class="form-group">
+            <label><span data-i18n="contact-form-message">Message / Additional Details</span></label>
+            <textarea name="message" class="form-control" rows="4" placeholder="Describe your requirement, delivery location, packaging preferences, etc." data-i18n-placeholder="contact-placeholder-message"></textarea>
+          </div>
+
+          <div class="form-btn-row">
+            <button type="button" id="wa-send-btn" class="btn btn-gold"><span data-i18n="quote-submit">💬 Send via WhatsApp</span></button>
+            <button type="submit" data-i18n="contact-btn-submit" class="btn btn-primary">📋 Submit Inquiry</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: QUICK CONTACT PANEL -->
+      <div>
+        <div class="section-label">Quick Info</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">Our <span>Business Details</span></h2>
+        <div class="quick-contact-panel">
+          <h2 data-i18n="contact-business-card">📇 Business Card</h2>
+
+          <div class="biz-card">
+            <div class="biz-name">M/S PARAG SURESHRAO CHAWARE (HUF)</div>
+            <div class="biz-unit">Unit: Suresh Namdeorao Chaware Wholesale Vegetables Merchant</div>
+            <span class="biz-reg">UDYAM-MH-08-0029832</span>
+            <div class="biz-row">
+              <span class="ic">📍</span>
+              <div>Shop No. 15 &amp; 16, Mahatma Jyotibha Phule Market,<br>Krushi Utpanna Bazar, Samiti Ram Nagar,<br>Chandrapur, Maharashtra 442401</div>
+            </div>
+            <div class="biz-row">
+              <span class="ic">📍</span>
+              <div>Block 15-16, Krushi Bazar Samiti,<br>Datala Road, Ramnagar, Chandrapur – 442401</div>
+            </div>
+            <div class="biz-row">
+              <span class="ic">📞</span>
+              <div>
+                <a href="tel:+919975649575">+91 99756 49575 (Call)</a><br>
+                <a href="https://wa.me/919552233488" target="_blank" style="color:#86efac;">+91 95522 33488 (WhatsApp)</a><br>
+                <a href="tel:+919922775569">+91 99227 75569</a><br>
+                <a href="tel:+919850151889">+91 98501 51889</a>
+              </div>
+            </div>
+            <div class="biz-row">
+              <span class="ic">✉️</span>
+              <div>
+                <a href="mailto:sncvegetable@gmail.com">sncvegetable@gmail.com</a><br>
+                <a href="mailto:paragchaware@gmail.com">paragchaware@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20a%20wholesale%20inquiry." target="_blank" class="wa-quick-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Quick WhatsApp Message
+          </a>
+
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div style="font-size:.82rem;color:rgba(255,255,255,.6);font-weight:600;margin-bottom:.6rem;">BUSINESS HOURS</div>
+            <div style="font-size:.9rem;color:rgba(255,255,255,.85);">📅 Monday – Saturday</div>
+            <div style="font-size:.9rem;color:#4ade80;font-weight:700;">🕐 6:00 AM – 8:00 PM</div>
+            <div style="font-size:.82rem;color:rgba(255,255,255,.5);margin-top:.35rem;">Sunday: Closed</div>
+          </div>
+
+          <div style="margin-bottom:.6rem;font-size:.82rem;color:rgba(255,255,255,.6);font-weight:600;">CONNECT WITH US</div>
+          <div class="quick-socials">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="mailto:sncvegetable@gmail.com" title="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="https://wa.me/919552233488" target="_blank" title="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- GOOGLE MAP EMBED -->
+<!-- ============================================================ -->
+<section class="section-pad" style="background:#fff;">
+  <div class="container">
+    <div class="map-info">
+      <div>
+        <div class="section-label">Our Location</div>
+        <h2>Find Us at <span style="color:var(--leaf-green);">APMC Chandrapur</span></h2>
+        <p>Shop No. 15 &amp; 16, Mahatma Jyotibha Phule Market,<br>Krushi Utpanna Bazar, Ramnagar, Chandrapur, Maharashtra 442401</p>
+      </div>
+      <a href="https://maps.google.com/?q=Mahatma+Jyotibha+Phule+Market+Ramnagar+Chandrapur+Maharashtra" target="_blank" class="btn btn-primary" style="align-self:flex-start;">
+        📌 Get Directions
+      </a>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.7843429437565!2d79.28235802504395!3d19.961888599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd2d70356e5b2f5%3A0xdd19a8c9c30716aa!2sSuresh%20Namdeorao%20Chaware%2C%20vegetable%20wholesale%20merchant.!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        title="APMC Chandrapur Location Map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CTA STRIP -->
+<!-- ============================================================ -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="badge badge-gold" style="margin:0 auto 1rem;display:inline-flex;">⚡ Urgent Requirements</div>
+    <h2 data-i18n="contact-urgent-title">Have Urgent Requirements? Contact Us Directly</h2>
+    <p data-i18n="contact-urgent-copy">Our team is available Monday to Saturday, 6:00 AM – 8:00 PM IST. Reach us by phone, WhatsApp, or email for immediate assistance.</p>
+    <div class="cta-btns">
+      <a href="tel:+919975649575" class="btn btn-gold" style="font-size:1rem;padding:.85rem 2rem;">📞 +91 99756 49575</a>
+      <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20an%20urgent%20requirement." target="_blank" class="btn btn-white" style="font-size:1rem;padding:.85rem 2rem;color:var(--forest-mid);">💬 WhatsApp Now</a>
+      <a href="mailto:sncvegetable@gmail.com" class="btn" style="background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);color:#fff;font-size:1rem;padding:.85rem 2rem;">✉️ Send Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-badge">🏆 25+ Years Of Experience</div>
+          <div class="footer-logo-wrap">
+            <div class="footer-logo-img">
+              <img src="./assets/images/Logo-2.png" alt="SNC Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-weight:900;color:#fff;font-size:1.1rem;\'>SNC</span>'">
+            </div>
+            <div>
+              <h3>M/S Parag Sureshrao Chaware (HUF)</h3>
+              <div class="footer-unit">Suresh Namdeorao Chaware — Wholesale Vegetables Merchant</div>
+            </div>
+          </div>
+          <p data-i18n="footer-tagline">We take pride in being a cornerstone of the agricultural ecosystem in Chandrapur, Maharashtra — connecting farmers, buyers, and the city.</p>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:1rem;">Udyam Reg. No.: <strong style="color:var(--gold);">UDYAM-MH-08-0029832</strong></div>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer-links-title">Quick Links</h4>
+          <ul>
+            <li><a href="./index.html" data-i18n="footer-home">Home</a></li>
+            <li><a href="./history.html" data-i18n="footer-history">History of Chandrapur</a></li>
+            <li><a href="./vision-mission.html" data-i18n="nav-vm">Vision &amp; Mission</a></li>
+            <li><a href="./our-team.html" data-i18n="nav-team">Our Team</a></li>
+            <li><a href="./products.html" data-i18n="footer-products">Product Category</a></li>
+            <li><a href="./wholesale-supply.html" data-i18n="nav-wholesale">Wholesale Supply</a></li>
+            <li><a href="./gallery.html" data-i18n="footer-gallery">Gallery</a></li>
+            <li><a href="./contact.html" data-i18n="footer-contact">Contact Us</a></li>
+            <li><a href="./whatsapp-manager.html" target="_blank" rel="noopener">💬 WhatsApp Manager ↗</a></li>
+            <li><a href="./account-ledger.html" target="_blank" rel="noopener">📒 Account Ledger ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer-contact-title">Get In Touch</h4>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              Block 15-16, Krushi Bazar Samiti,<br>Datala Road, Ramnagar,<br>Chandrapur, Maharashtra - 442401
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <a href="tel:+919975649575">+91 99756 49575 (Call)</a><br>
+              <a href="https://wa.me/919552233488" target="_blank" style="color:var(--gold);">+91 95522 33488 (WhatsApp)</a><br>
+              <a href="tel:+919922775569">+91 99227 75569</a><br>
+              <a href="tel:+919850151889">+91 98501 51889</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <a href="mailto:sncvegetable@gmail.com">sncvegetable@gmail.com</a><br>
+              <a href="mailto:paragchaware@gmail.com">paragchaware@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">Mon–Sat: 6:00 AM – 8:00 PM<br><span style="color:var(--gold);font-weight:600;">Open • APMC Market Hours</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span data-i18n="footer-copyright">© 2026 M/S Parag Sureshrao Chaware (HUF) | Suresh Namdeorao Chaware Wholesale Vegetables Merchant. All Rights Reserved.</span>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <div class="udyam-badge">UDYAM-MH-08-0029832</div>
+        <a href="https://maps.app.goo.gl/Wcz9DRLzqWhwTSBo7" target="_blank" style="color:var(--gold);font-size:.72rem;font-weight:600;">⭐ 4.8 Google</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING ACTION DOCK -->
+<div id="float-dock">
+  <button id="scroll-top" class="float-btn float-top" title="Back to top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+  <a href="tel:+919975649575" class="float-btn float-call" title="Call Now" aria-label="Call Now">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  </a>
+  <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%27d%20like%20to%20inquire%20about%20wholesale%20vegetables." target="_blank" class="float-btn float-wa" title="WhatsApp Chat" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="admin-modal">
+  <div class="admin-modal-box">
+    <button class="admin-modal-close" aria-label="Close">✕</button>
+    <div class="admin-modal-logo">🔐</div>
+    <div class="admin-modal-title">Admin Login</div>
+    <div class="admin-modal-sub">Suresh Namdeo Chawre — Secure Admin Access</div>
+    <form id="admin-form">
+      <div class="form-group">
+        <label><span data-i18n="admin-label-user">Username / Email</span></label>
+        <input type="text" class="form-control" placeholder="Enter admin username" data-i18n-placeholder="admin-placeholder-user" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="admin-label-password">Password</span></label>
+        <input type="password" class="form-control" placeholder="Enter password" data-i18n-placeholder="admin-placeholder-password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem;"><span data-i18n="btn-sign-in">Sign In</span></button>
+    </form>
+    <p class="admin-note">🔒 <span data-i18n="admin-note">Secure admin access only. Unauthorized access is prohibited.</span></p>
+  </div>
+</div>
+
+<!-- BULK QUOTE MODAL -->
+<div id="quote-modal">
+  <div class="quote-modal-box">
+    <button class="quote-modal-close" aria-label="Close">✕</button>
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <div style="font-size:2.5rem;margin-bottom:.5rem;">📋</div>
+      <h3 style="font-size:1.3rem;font-weight:800;color:var(--forest-dark);margin-bottom:.35rem;"><span data-i18n="quote-title">Request Bulk Quote</span></h3>
+      <p style="font-size:.88rem;color:var(--text-light);"><span data-i18n="quote-response">We'll respond within 2 business hours.</span></p>
+    </div>
+    <form id="quote-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span data-i18n="quote-name">Your Name / Business</span></label>
+          <input type="text" name="name" class="form-control" placeholder="Enter name or company" data-i18n-placeholder="quote-placeholder-name" required>
+        </div>
+        <div class="form-group">
+          <label><span data-i18n="quote-phone">Phone / WhatsApp</span></label>
+          <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-product">Product Required</span></label>
+        <input type="text" name="product" id="quote-product" class="form-control" placeholder="e.g. Tomatoes, Onions, Potatoes" data-i18n-placeholder="quote-placeholder-product">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-quantity">Estimated Quantity</span></label>
+        <input type="text" name="quantity" class="form-control" placeholder="e.g. 5 tons, 500 kg/week" data-i18n-placeholder="quote-placeholder-quantity">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-note">Additional Note</span></label>
+        <textarea name="message" class="form-control" rows="3" placeholder="Delivery requirements, grading specs, etc." data-i18n-placeholder="quote-placeholder-message"></textarea>
+      </div>
+      <div style="display:flex;gap:.75rem;">
+        <button type="button" id="quote-wa-btn" class="btn btn-gold" style="flex:1;justify-content:center;">
+          <span data-i18n="quote-submit">💬 Send via WhatsApp</span>
+        </button>
+        <a href="./contact.html" class="btn btn-primary" style="flex:1;justify-content:center;text-align:center;">
+          Full Inquiry Form
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lightbox-img-wrap">
+    <button id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-btn" id="lb-prev" aria-label="Previous">‹</button>
+    <img id="lb-img" src="" alt="Gallery Image">
+    <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
+    <div class="lb-counter" id="lb-counter"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+</div>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+

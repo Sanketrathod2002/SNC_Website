@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Page Not Found | Suresh Namdeo Chawre</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: linear-gradient(135deg, #052e16 0%, #14532d 60%, #15803d 100%);
+    color: #fff; text-align: center; padding: 2rem;
+  }
+  .content { max-width: 520px; }
+  .emoji { font-size: 5rem; margin-bottom: 1rem; display: block; animation: bounce 2s infinite; }
+  h1 { font-size: 6rem; font-weight: 900; color: #f59e0b; line-height: 1; margin-bottom: .5rem; }
+  h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: .75rem; }
+  p { color: rgba(255,255,255,.75); font-size: 1rem; line-height: 1.65; margin-bottom: 2rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .75rem 1.75rem; border-radius: 50px; font-weight: 700;
+    font-size: .95rem; text-decoration: none; transition: all .3s;
+    font-family: inherit;
+  }
+  .btn-gold { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; margin-right: .75rem; }
+  .btn-outline { border: 2px solid rgba(255,255,255,.4); color: #fff; }
+  .btn:hover { transform: translateY(-2px); }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.language-control{position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;align-items:center;gap:.4rem;padding:.35rem .55rem;background:#fff;border:1px solid #dbe5dc;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.12);color:#14532d;font-family:'Noto Sans Devanagari',sans-serif}.language-control select{border:0;background:transparent;color:#14532d;font:600 .9rem 'Noto Sans Devanagari',sans-serif;outline:none;cursor:pointer}html[lang="mr"],html[lang="hi"] body{font-family:'Noto Sans Devanagari',sans-serif;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="content">
+  <span class="emoji">🌿</span>
+  <h1>404</h1>
+  <h2><span data-i18n="notfound-title">404 Page Not Found</span></h2>
+  <p data-i18n="notfound-copy">The page you're looking for doesn't exist or has been moved. Let's get you back to fresh produce!</p>
+  <a href="./index.html" class="btn btn-gold" data-i18n="notfound-home">🏠 Go Home</a>
+  <a href="./contact.html" class="btn btn-outline" data-i18n="notfound-contact">📞 Contact Us</a>
+</div>
+<div class="language-control"><label for="site-language">🌐</label><select id="site-language" aria-label="Language"><option value="en">English</option><option value="mr">मराठी</option><option value="hi">हिंदी</option></select></div><script src="./assets/js/page-i18n.js"></script>
+</body>
+</html>

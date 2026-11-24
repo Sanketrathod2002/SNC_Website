@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>WhatsApp Manager | Suresh Namdeo Chawre</title>
+  <link rel="icon" type="image/png" href="./assets/images/Logo-2.png">
+  <meta name="description" content="SNC WhatsApp Manager — Official Business Suite for Suresh Namdeo Chawre Wholesale Vegetables.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #052e16;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #app-frame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      z-index: 10;
+      background: #ffffff;
+    }
+    #loading-screen {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #052e16 0%, #14532d 60%, #15803d 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      color: #ffffff;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    #loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .spinner {
+      width: 52px;
+      height: 52px;
+      border: 4px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #22c55e;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 1.25rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .portal-tag {
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #86efac;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+    .app-title {
+      font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.4rem;
+    }
+    .app-subtitle {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 380px;
+      line-height: 1.5;
+    }
+    /* Floating top control bar */
+    .top-pill {
+      position: fixed;
+      top: 12px;
+      right: 14px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(5, 46, 22, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      opacity: 0.88;
+    }
+    .top-pill:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+      background: #14532d;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+      color: #86efac;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Splash Screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <div class="portal-tag">SNC Business Suite</div>
+    <div class="app-title">WhatsApp Manager</div>
+    <div class="app-subtitle">Loading secure portal…</div>
+  </div>
+
+  <!-- Quick Home Link -->
+  <a href="./index.html" class="top-pill" title="Return to Main Website">
+    <span>🌿 SNC Main Website</span>
+  </a>
+
+  <!-- Secure Container Frame -->
+  <iframe
+    id="app-frame"
+    title="WhatsApp Manager"
+    allow="clipboard-read; clipboard-write; camera; microphone; geolocation; fullscreen"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads"
+  ></iframe>
+
+  <script>
+    (function () {
+      'use strict';
+      // Encoded target endpoint
+      const _e = 'aHR0cHM6Ly9zYW5rZXRyYXRob2QyMDAyLmdpdGh1Yi5pby9TTkNfV2hhdHNBcHBfQnVzaW5lc3NfU3VpdC8=';
+      const frame = document.getElementById('app-frame');
+      const loader = document.getElementById('loading-screen');
+
+      try {
+        const dest = atob(_e);
+        frame.src = dest;
+        frame.onload = function () {
+          if (loader) loader.classList.add('hidden');
+        };
+        // Failsafe timeout
+        setTimeout(function () {
+          if (loader) loader.classList.add('hidden');
+        }, 3200);
+      } catch (err) {
+        console.error('Portal initialization failed:', err);
+      }
+    })();
+  </script>
+</body>
+</html>

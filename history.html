@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="History of Chandrapur — Discover the rich heritage of the city where our roots are planted. From the 13th century Gond kingdom to modern Maharashtra.">
+  <meta name="keywords" content="History of Chandrapur, Chandrapur history, Gond kingdom, Chanda city, Maharashtra history, APMC Chandrapur">
+  <meta property="og:title" content="History of Chandrapur | Suresh Namdeo Chawre">
+  <meta data-i18n="history-era-coal" property="og:description" content="Discover the rich heritage of Chandrapur — the Black Gold City of Maharashtra.">
+  <meta property="og:image" content="./assets/images/Logo-2.png">
+  <meta property="og:type" content="website">
+  <title>History of Chandrapur | Suresh Namdeo Chawre</title>
+  <link rel="icon" type="image/png" href="./assets/images/Logo-2.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            'forest-dark': '#052e16', 'forest-mid': '#14532d', 'leaf': '#16a34a',
+            'gold': '#f59e0b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ── TIMELINE STYLES ── */
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #052e16, #16a34a, #052e16);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      margin-bottom: 3.5rem;
+      align-items: flex-start;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      grid-column: 1;
+      text-align: right;
+      padding-right: 2.5rem;
+    }
+    .timeline-item:nth-child(odd) .timeline-dot-col {
+      grid-column: 2;
+    }
+    .timeline-item:nth-child(odd) .timeline-spacer {
+      grid-column: 3;
+    }
+    .timeline-item:nth-child(even) .timeline-spacer {
+      grid-column: 1;
+    }
+    .timeline-item:nth-child(even) .timeline-dot-col {
+      grid-column: 2;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      grid-column: 3;
+      text-align: left;
+      padding-left: 2.5rem;
+    }
+    .timeline-dot-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #052e16, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 20px rgba(22,163,74,.35);
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .timeline-era-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+      color: #052e16;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: .3rem .75rem;
+      border-radius: 999px;
+      border: 1px solid #86efac;
+      margin-bottom: .6rem;
+    }
+    .timeline-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 24px rgba(5,46,22,.08);
+      border: 1px solid #e2e8f0;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(5,46,22,.13);
+    }
+    .timeline-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #052e16;
+      margin-bottom: .6rem;
+      line-height: 1.4;
+    }
+    .timeline-card p {
+      font-size: .9rem;
+      color: #475569;
+      line-height: 1.8;
+    }
+    .timeline-item:nth-child(odd) .timeline-era-badge {
+      margin-left: auto;
+    }
+
+    /* ── PAGE HERO (inner pages) ── */
+    .page-hero {
+      background: linear-gradient(135deg, #052e16 0%, #14532d 55%, #1a6b3a 100%);
+      padding: 5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .5;
+    }
+    .page-hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .82rem;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb .bc-sep { color: rgba(255,255,255,.35); }
+    .breadcrumb .bc-current { color: #86efac; font-weight: 600; }
+    .page-hero-title {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .page-hero-title span {
+      color: #86efac;
+    }
+    .page-hero-tagline {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.75);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #1a6b3a 100%);
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .4;
+    }
+    .cta-banner-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── SECTION HEADING ── */
+    .timeline-heading {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-heading .section-label {
+      justify-content: center;
+      margin-bottom: .75rem;
+    }
+    .timeline-heading h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: #052e16;
+      margin-bottom: .6rem;
+    }
+    .timeline-heading h2 span { color: #16a34a; }
+    .timeline-heading p {
+      font-size: 1rem;
+      color: #64748b;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 24px;
+      }
+      .timeline-item {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: auto;
+      }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        padding-left: 1.25rem;
+        padding-right: 0;
+      }
+      .timeline-item:nth-child(odd) .timeline-dot-col,
+      .timeline-item:nth-child(even) .timeline-dot-col {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .timeline-item:nth-child(odd) .timeline-spacer,
+      .timeline-item:nth-child(even) .timeline-spacer {
+        display: none;
+      }
+      .timeline-item:nth-child(odd) .timeline-era-badge {
+        margin-left: 0;
+      }
+      .timeline-dot {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div id="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span class="welcome-txt" data-i18n="tb-welcome">Welcome to <strong>Suresh Namdeo Chawre</strong></span>
+      <span class="sep">|</span>
+      <span class="top-bar-loc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span data-i18n="tb-location">APMC Market, Ram Nagar, Chandrapur</span>
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <a href="mailto:sncvegetable@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        sncvegetable@gmail.com
+      </a>
+      <a href="tel:+919975649575">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +91 99756 49575
+      </a>
+      <div class="top-bar-socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="lang-btn" aria-label="Language">
+          🌐 <span class="lang-label">English</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <a href="#" data-lang="en">🇬🇧 English</a>
+          <a href="#" data-lang="mr">🇮🇳 मराठी</a>
+          <a href="#" data-lang="hi">🇮🇳 हिंदी</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<header id="main-header">
+  <div class="container">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="./assets/images/Logo-e1735204361264.png" alt="SNC Logo" onerror="this.src='./assets/images/Logo-2.png'">
+      </div>
+      <div>
+        <div class="brand-name">Suresh Namdeo Chawre</div>
+        <div class="brand-tagline" data-i18n="brand-tagline">WHOLESALE VEGETABLES • CHANDRAPUR</div>
+      </div>
+    </div>
+    <nav>
+      <a href="./index.html" class="nav-link" data-i18n="nav-home">Home</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link" data-i18n="nav-about">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="./history.html" data-i18n="nav-history">📜 History</a>
+          <a href="./vision-mission.html" data-i18n="nav-vm">🎯 Vision &amp; Mission</a>
+          <a href="./our-team.html" data-i18n="nav-team">👥 Our Team</a>
+        </div>
+      </div>
+      <a href="./products.html" class="nav-link" data-i18n="nav-products">Product Category</a>
+      <a href="./wholesale-supply.html" class="nav-link" data-i18n="nav-wholesale">Wholesale Supply</a>
+      <a href="./gallery.html" class="nav-link" data-i18n="nav-gallery">Gallery</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav-contact">Contact Us</a>
+      <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-wa" title="WhatsApp Manager">
+        <span class="nav-btn-icon">💬</span><span data-i18n="nav-wa-manager">WhatsApp Manager</span><span class="nav-btn-ext">↗</span>
+      </a>
+      <a href="./account-ledger.html" target="_blank" rel="noopener" class="nav-btn-app nav-btn-ledger" title="Account Ledger">
+        <span class="nav-btn-icon">📒</span><span data-i18n="nav-ledger">Account Ledger</span><span class="nav-btn-ext">↗</span>
+      </a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+919975649575" class="btn btn-primary" data-i18n="btn-call">📞 Call Now</a>
+      <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" data-i18n="btn-quote">💬 Bulk Quote</a>
+      <a href="#" class="btn-admin open-admin" data-i18n="btn-admin">🔐 Admin</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="mobile-nav-brand">🌿 Suresh Namdeo Chawre</div>
+    <button class="mobile-close" id="mobile-close" aria-label="Close">✕</button>
+  </div>
+  <a href="./index.html" class="mobile-nav-link">🏠 <span data-i18n="nav-home">Home</span></a>
+  <button class="mobile-nav-link mobile-nav-toggle" style="width:100%;text-align:left;color:rgba(255,255,255,.9);font-size:1.05rem;font-weight:600;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer;">
+    ℹ️ <span data-i18n="nav-about">About Us</span> <span class="nav-arrow">▾</span>
+  </button>
+  <div class="mobile-nav-sub" style="display:none;">
+    <a href="./history.html">📜 <span data-i18n="nav-history">History</span></a>
+    <a href="./vision-mission.html">🎯 <span data-i18n="nav-vm">Vision &amp; Mission</span></a>
+    <a href="./our-team.html">👥 <span data-i18n="nav-team">Our Team</span></a>
+  </div>
+  <a href="./products.html" class="mobile-nav-link">🥦 <span data-i18n="nav-products">Product Category</span></a>
+  <a href="./wholesale-supply.html" class="mobile-nav-link">🏪 <span data-i18n="nav-wholesale">Wholesale Supply</span></a>
+  <a href="./gallery.html" class="mobile-nav-link">🖼️ <span data-i18n="nav-gallery">Gallery</span></a>
+  <a href="./contact.html" class="mobile-nav-link">📞 <span data-i18n="nav-contact">Contact Us</span></a>
+  <a href="./whatsapp-manager.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-wa">💬 <span data-i18n="nav-wa-manager">WhatsApp Manager</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <a href="./account-ledger.html" target="_blank" rel="noopener" class="mobile-nav-app mobile-nav-ledger">📒 <span data-i18n="nav-ledger">Account Ledger</span> <span class="mobile-nav-badge">Portal ↗</span></a>
+  <div class="mobile-nav-actions">
+    <a href="tel:+919975649575" class="btn btn-primary" style="justify-content:center;">📞 Call: +91 99756 49575</a>
+    <a href="tel:+919922775569" class="btn btn-outline" style="justify-content:center;border-color:rgba(255,255,255,.4);color:#fff;">📞 +91 99227 75569</a>
+    <a href="#" class="btn btn-gold open-quote" data-product="mixed seasonal vegetables" style="justify-content:center;">💬 <span data-i18n="btn-quote">Bulk Quote</span></a>
+    <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%20have%20a%20wholesale%20inquiry." target="_blank" class="btn btn-gold" style="justify-content:center;">💬 WhatsApp</a>
+    <a href="#" class="btn btn-white open-admin" style="justify-content:center;color:#052e16;">🔐 Admin Login</a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="./index.html" data-i18n="footer-home">Home</a>
+      <span class="bc-sep">›</span>
+      <a href="#" data-i18n="about-label">About Us</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-current" data-i18n="nav-history">History</span>
+    </nav>
+    <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;">
+      <div class="badge badge-gold" style="display:inline-flex;">📜 City Heritage</div>
+    </div>
+    <h1 class="page-hero-title"><span data-i18n="history-page-title">History of Chandrapur</span></h1>
+    <p class="page-hero-tagline"><span data-i18n="history-page-subtitle">Discover the rich heritage of the city where our roots are planted.</span></p>
+    <div style="display:flex;gap:1.25rem;margin-top:2rem;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.75);font-size:.85rem;">
+        <span style="color:#86efac;font-size:1rem;">🏛️</span> Established 13th Century
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.75);font-size:.85rem;">
+        <span style="color:#86efac;font-size:1rem;">🌙</span> City of the Moon
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.75);font-size:.85rem;">
+        <span style="color:#86efac;font-size:1rem;">⚫</span> Black Gold City
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TIMELINE SECTION -->
+<!-- ============================================================ -->
+<section class="section-pad" style="background:var(--surface,#f8faf8);">
+  <div class="container">
+
+    <div class="timeline-heading">
+      <div class="section-label" data-i18n="history-era-label" style="justify-content:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+        Through the Ages
+      </div>
+      <h2 data-i18n="history-story-title">The Story of Chandrapur</h2>
+      <p><span data-i18n="history-story-subtitle">From ancient empires to modern Maharashtra — a journey through centuries of rich history.</span></p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- ITEM 1: 13th Century | Foundation -->
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <div class="timeline-era-badge">🏰 13th Century | Foundation</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-1">The Founding of Chandrapur</h3>
+            <p data-i18n="history-chapter-1-copy">Chandrapur (formerly known as Chanda until 1964) is a city and municipal corporation in Chandrapur district, Maharashtra, India. It is the headquarters of Chandrapur district and was founded in the 13th century by the Gond king, Khandkya Ballaal Shah, as a fort city. The city is situated at the confluence of the Irai and Zarpat rivers, and the surrounding area is rich in coal seams, earning it the nickname <strong>'Black Gold City.'</strong></p>
+          </div>
+        </div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">🏰</div>
+        </div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- ITEM 2: Etymology | Name Origin -->
+      <div class="timeline-item reveal" style="transition-delay:.1s;">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">🌙</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-era-badge">🌙 Etymology | Name Origin</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-2">'Chandrapur' — The City of the Moon</h3>
+            <p data-i18n="history-chapter-2-copy">The name "Chandrapur" is locally connected to the words <strong>Chandra</strong> (moon) and <strong>Pur</strong> (settlement). Scholars believe it derives from "Indupur" (city of the moon), a name associated with the Treta Yuga near Zarpat.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3: Ancient Empires -->
+      <div class="timeline-item reveal" style="transition-delay:.2s;">
+        <div class="timeline-content">
+          <div class="timeline-era-badge">⚔️ 322 BCE – 12th Century | Ancient Empires</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-3">From the Mauryan Empire to the Chalukyas</h3>
+            <p data-i18n="history-chapter-3-copy">Chandrapur has been ruled by various empires throughout history. Between 322 BCE and 187 BCE, it was part of the <strong>Mauryan Empire</strong>, followed by the Shunga Empire (187 BCE–78 BCE), the Satavahana Empire (1st century BCE–2nd century CE), and the Vakataka dynasty (3rd century CE–550 CE). Subsequent rulers included the Kalachuri dynasty (6th–7th centuries), Rashtrakuta dynasty (7th–10th centuries), and the Chalukya dynasty (until the 12th century). The Seuna (Yadava) dynasty governed the region from around 850 CE to 1334 CE.</p>
+          </div>
+        </div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">⚔️</div>
+        </div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- ITEM 4: Gond Kingdom -->
+      <div class="timeline-item reveal" style="transition-delay:.3s;">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">👑</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-era-badge">👑 1470–1495 | Gond Kingdom</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-4">Gond King Khandkya Ballaal Shah — City Founder</h3>
+            <p data-i18n="history-chapter-4-copy">The Gond people, an indigenous group, were widespread in central India. Gond King <strong>Khandkya Ballaal (1470–1495)</strong> founded Chandrapur after relocating from Sirpur to the north bank of the Wardha River. Legend says the king, afflicted with bodily knots, discovered a miraculous water source near the Zarpat River that cured him. He and his queen deemed the site sacred and constructed a temple, marking the foundation of the city. A hare-and-dog chase, deemed an auspicious omen, inspired the city's layout and fortification by his officer, Tel Thakur.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 5: Maratha & British Era -->
+      <div class="timeline-item reveal" style="transition-delay:.4s;">
+        <div class="timeline-content">
+          <div class="timeline-era-badge">🏴 1751–1853 | Maratha &amp; British Era</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-5">Maratha Rule and British Annexation</h3>
+            <p data-i18n="history-chapter-5-copy">In 1751, during the Maratha Empire, Chandrapur was captured by the <strong>Nagpur Bhonsles</strong>. Following the death of Raghuji Bhonsle III in 1853, Chandrapur was annexed to British India. During British rule, Chandrapur was referred to as 'Chanda.' Anglican and Scottish Episcopal missionaries arrived in 1871, and administrative reforms established new talukas and tehsils in subsequent years.</p>
+          </div>
+        </div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">🏴</div>
+        </div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- ITEM 6: Modern Maharashtra -->
+      <div class="timeline-item reveal" style="transition-delay:.5s;">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot-col">
+          <div class="timeline-dot">🗺️</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-era-badge">🗺️ 1956–1981 | Modern Maharashtra</div>
+          <div class="timeline-card">
+            <h3 data-i18n="history-chapter-6">Reorganization and the Birth of Modern Chandrapur</h3>
+            <p data-i18n="history-chapter-6-copy">In 1956, with the reorganization of Indian states, Chandrapur district was transferred from <strong>Madhya Pradesh to Bombay State</strong>, and in 1960 it became part of Maharashtra. The city's name was officially changed from Chanda to <strong>Chandrapur in 1964</strong>. By the 1981 census, Chandrapur district was divided into Chandrapur and Gadchiroli districts.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CTA BANNER -->
+<!-- ============================================================ -->
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <div class="badge badge-gold" style="margin:0 auto 1.25rem;display:inline-flex;">🌿 Our Legacy</div>
+    <h2 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.25;">
+      Experience the Legacy — Partner with<br>Chandrapur's Most Trusted Merchant
+    </h2>
+    <p data-i18n="history-legacy-copy" style="font-size:1rem;color:rgba(255,255,255,.8);max-width:540px;margin:0 auto 2.25rem;line-height:1.75;">
+      With roots as deep as Chandrapur itself, Suresh Namdeo Chawre brings 25+ years of trusted wholesale vegetable trading from the heart of this historic city.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="./contact.html" class="btn btn-gold" style="font-size:1rem;padding:.85rem 2.25rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        Contact Us
+      </a>
+      <a href="./our-team.html" class="btn btn-white" style="font-size:1rem;padding:.85rem 2.25rem;color:#052e16;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        <span data-i18n="nav-team">Our Team</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-badge">🏆 25+ Years Of Experience</div>
+          <div class="footer-logo-wrap">
+            <div class="footer-logo-img">
+              <img src="./assets/images/Logo-2.png" alt="SNC Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-weight:900;color:#fff;font-size:1.1rem;\'>SNC</span>'">
+            </div>
+            <div>
+              <h3>M/S Parag Sureshrao Chaware (HUF)</h3>
+              <div class="footer-unit">Suresh Namdeorao Chaware — Wholesale Vegetables Merchant</div>
+            </div>
+          </div>
+          <p data-i18n="footer-tagline">We take pride in being a cornerstone of the agricultural ecosystem in Chandrapur, Maharashtra — connecting farmers, buyers, and the city.</p>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:1rem;">Udyam Reg. No.: <strong style="color:var(--gold);">UDYAM-MH-08-0029832</strong></div>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer-links-title">Quick Links</h4>
+          <ul>
+            <li><a href="./index.html" data-i18n="footer-home">Home</a></li>
+            <li><a href="./history.html" data-i18n="footer-history">History of Chandrapur</a></li>
+            <li><a href="./vision-mission.html" data-i18n="nav-vm">Vision &amp; Mission</a></li>
+            <li><a href="./our-team.html" data-i18n="nav-team">Our Team</a></li>
+            <li><a href="./products.html" data-i18n="footer-products">Product Category</a></li>
+            <li><a href="./wholesale-supply.html" data-i18n="nav-wholesale">Wholesale Supply</a></li>
+            <li><a href="./gallery.html" data-i18n="footer-gallery">Gallery</a></li>
+            <li><a href="./contact.html" data-i18n="footer-contact">Contact Us</a></li>
+            <li><a href="./whatsapp-manager.html" target="_blank" rel="noopener">💬 WhatsApp Manager ↗</a></li>
+            <li><a href="./account-ledger.html" target="_blank" rel="noopener">📒 Account Ledger ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer-contact-title">Get In Touch</h4>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              Block 15-16, Krushi Bazar Samiti,<br>Datala Road, Ramnagar,<br>Chandrapur, Maharashtra - 442401
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <a href="tel:+919975649575">+91 99756 49575 (Call)</a><br>
+              <a href="https://wa.me/919552233488" target="_blank" style="color:var(--gold);">+91 95522 33488 (WhatsApp)</a><br>
+              <a href="tel:+919922775569">+91 99227 75569</a><br>
+              <a href="tel:+919850151889">+91 98501 51889</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <a href="mailto:sncvegetable@gmail.com">sncvegetable@gmail.com</a><br>
+              <a href="mailto:paragchaware@gmail.com">paragchaware@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">Mon–Sat: 6:00 AM – 8:00 PM<br><span style="color:var(--gold);font-weight:600;">Open • APMC Market Hours</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span data-i18n="footer-copyright">© 2026 M/S Parag Sureshrao Chaware (HUF) | Suresh Namdeorao Chaware Wholesale Vegetables Merchant. All Rights Reserved.</span>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <div class="udyam-badge">UDYAM-MH-08-0029832</div>
+        <a href="https://maps.app.goo.gl/Wcz9DRLzqWhwTSBo7" target="_blank" style="color:var(--gold);font-size:.72rem;font-weight:600;">⭐ 4.8 Google</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING ACTION DOCK -->
+<div id="float-dock">
+  <button id="scroll-top" class="float-btn float-top" title="Back to top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+  <a href="tel:+919975649575" class="float-btn float-call" title="Call Now" aria-label="Call Now">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  </a>
+  <a href="https://wa.me/919552233488?text=Hello%20Suresh%20Namdeo%20Chawre%2C%20I%27d%20like%20to%20inquire%20about%20wholesale%20vegetables." target="_blank" class="float-btn float-wa" title="WhatsApp Chat" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="admin-modal">
+  <div class="admin-modal-box">
+    <button class="admin-modal-close" aria-label="Close">✕</button>
+    <div class="admin-modal-logo">🔐</div>
+    <div class="admin-modal-title">Admin Login</div>
+    <div class="admin-modal-sub">Suresh Namdeo Chawre — Secure Admin Access</div>
+    <form id="admin-form">
+      <div class="form-group">
+        <label><span data-i18n="admin-label-user">Username / Email</span></label>
+        <input type="text" class="form-control" placeholder="Enter admin username" data-i18n-placeholder="admin-placeholder-user" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="admin-label-password">Password</span></label>
+        <input type="password" class="form-control" placeholder="Enter password" data-i18n-placeholder="admin-placeholder-password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem;"><span data-i18n="btn-sign-in">Sign In</span></button>
+    </form>
+    <p class="admin-note">🔒 <span data-i18n="admin-note">Secure admin access only. Unauthorized access is prohibited.</span></p>
+  </div>
+</div>
+
+<!-- BULK QUOTE MODAL -->
+<div id="quote-modal">
+  <div class="quote-modal-box">
+    <button class="quote-modal-close" aria-label="Close">✕</button>
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <div style="font-size:2.5rem;margin-bottom:.5rem;">📋</div>
+      <h3 style="font-size:1.3rem;font-weight:800;color:var(--forest-dark);margin-bottom:.35rem;"><span data-i18n="quote-title">Request Bulk Quote</span></h3>
+      <p style="font-size:.88rem;color:var(--text-light);"><span data-i18n="quote-response">We'll respond within 2 business hours.</span></p>
+    </div>
+    <form id="quote-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span data-i18n="quote-name">Your Name / Business</span></label>
+          <input type="text" name="name" class="form-control" placeholder="Enter name or company" data-i18n-placeholder="quote-placeholder-name" required>
+        </div>
+        <div class="form-group">
+          <label><span data-i18n="quote-phone">Phone / WhatsApp</span></label>
+          <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-product">Product Required</span></label>
+        <input type="text" name="product" id="quote-product" class="form-control" placeholder="e.g. Tomatoes, Onions, Potatoes" data-i18n-placeholder="quote-placeholder-product">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-quantity">Estimated Quantity</span></label>
+        <input type="text" name="quantity" class="form-control" placeholder="e.g. 5 tons, 500 kg/week" data-i18n-placeholder="quote-placeholder-quantity">
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="quote-note">Additional Note</span></label>
+        <textarea name="message" class="form-control" rows="3" placeholder="Delivery requirements, grading specs, etc." data-i18n-placeholder="quote-placeholder-message"></textarea>
+      </div>
+      <div style="display:flex;gap:.75rem;">
+        <button type="button" id="quote-wa-btn" class="btn btn-gold" style="flex:1;justify-content:center;">
+          <span data-i18n="quote-submit">💬 Send via WhatsApp</span>
+        </button>
+        <a href="./contact.html" class="btn btn-primary" style="flex:1;justify-content:center;text-align:center;">
+          Full Inquiry Form
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lightbox-img-wrap">
+    <button id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-btn" id="lb-prev" aria-label="Previous">‹</button>
+    <img id="lb-img" src="" alt="Gallery Image">
+    <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
+    <div class="lb-counter" id="lb-counter"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+</div>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
